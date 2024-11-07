@@ -18,8 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Update CORS options to use the correct frontend URL
 const corsOptions = {
-    origin: 'http://localhost:5173', // change this to the frontend URL in production
+    origin: 'http://localhost:5173/', // Updated to new frontend URL
     credentials: true
 };
 app.use(cors(corsOptions));
