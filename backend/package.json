@@ -5,13 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "build": "npm install && cd frontend && npm install && npm run build",
-    "postinstall": "cd frontend && npm install && npm run build"
+    "dev": "nodemon index.js",  // For local development
+    "start": "node index.js",   // For production, Render will use this
+    "build": "npm install && cd frontend && npm install && npm run build",  // Build frontend and backend
+    "postinstall": "cd frontend && npm install && npm run build"  // Ensure frontend is built after install
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
@@ -32,6 +30,7 @@
     "nodemon": "^3.1.7"
   }
 }
+
 
 
 
