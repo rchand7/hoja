@@ -22,13 +22,14 @@ app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
     origin: process.env.NODE_ENV === "production"
-        ? 'https://jobshijobss-2.onrender.com' // Your production frontend URL
-        : 'http://localhost:3000',  // Local development URL
+        ? 'https://hoja-pzb5.onrender.com'  // Production URL
+        : 'http://localhost:3000',          // Local development URL
     credentials: true
 };
 app.use(cors(corsOptions));
 
-// const PORT = process.env.PORT || 3000;
+// Define the PORT
+const PORT = process.env.PORT || 3000;
 
 // API routes
 app.use("/api/v1/user", userRoute);
@@ -54,4 +55,3 @@ app.listen(PORT, () => {
     connectDB();  // Connect to MongoDB
     console.log(`Server running at port ${PORT}`);
 });
-
